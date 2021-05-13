@@ -184,6 +184,7 @@ export class AuthService {
 
   public login(targetUrl?: string) {
     this.oauthService.initLoginFlow(encodeURIComponent(targetUrl || this.router.url));
+    console.log(this.router.url)
   }
 
   public logout() {

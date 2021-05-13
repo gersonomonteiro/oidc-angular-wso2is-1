@@ -7,9 +7,9 @@ export class ConfigService {
   constructor(@Inject('BASE_URL') public readonly originUrl: string) {
   }
 
-  public readonly authUrl = 'https://localhost:9443';
+  public readonly authUrl = 'https://10.4.9.46:9443';
 
-  public readonly apiUrl = 'https://localhost:9443/api';
+  public readonly apiUrl = 'https://10.4.9.46:9443/api';
 
   // Set this to true to enable the auto-login feature
   public readonly autoLogin = false;
@@ -20,10 +20,10 @@ export class ConfigService {
   // Auth config
   public authConfig: AuthConfig = {
     // Url of the Identity Provider
-    issuer: `${this.authUrl}/oauth2/oidcdiscovery`,
+    issuer: `${this.authUrl}/oauth2/token`, 
 
     // The SPA's id. The SPA is registerd with this id at the auth-server
-    clientId: 'iVilYq3pIWeG4xP6Xnbi09xut0ka',
+    clientId: 'HoqdjfMGd4A22yy0gNPMytsw7nEa',
 
     redirectUri: `${this.originUrl}/index.html`,
     silentRefreshRedirectUri: `${this.originUrl}/silent-refresh.html`,
@@ -41,7 +41,7 @@ export class ConfigService {
     // is a sign that the auth server is not configured with SPAs in mind
     // and it might not enforce further best practices vital for security
     // such applications.
-    // dummyClientSecret: 'secret',
+     dummyClientSecret: 'wrnRLvcULYHgzI0vkzlcuWJBD9Ea',
 
     // Use either 'code' for code flow (recommended) or '' for implicit flow
     responseType: 'code',
